@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Student</title>
+  <link rel="stylesheet" th:href="@{'/css/bootstrap.css'}">
+</head>
+<body>
+  <div class="container" th:insert="~{navbar.html}"></div>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-6">
+        <form th:action="@{'/addStudent'}" method="post">
+          <div class="form-group mt-3">
+            <label class="form-label">NAME:</label>
+            <input type="text" class="form-control" name="name" placeholder="Insert name: ">
+          </div>
+          <div class="form-group mt-3">
+            <label class="form-label">SURNAME:</label>
+            <input type="text" class="form-control" name="surname" placeholder="Insert surname: ">
+          </div>
+          <div class="form-group mt-3">
+            <label class="form-label">EXAM:</label>
+            <input type="number" class="form-control" name="exam" placeholder="Insert exam: " maxlength="100">
+          </div>
+          <div class="form-group mt-3">
+            <button type="submit" class="btn btn-success">ADD STUDENT</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

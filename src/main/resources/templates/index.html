@@ -22,12 +22,12 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr th:each="s : ${students}">
-                        <td th:text="${s.getId()}" th:class="${s.exam>=50?'text-primary':'text-danger'}"></td>
-                        <td th:text="${s.getName()}" th:class="${s.exam>=50?'text-primary':'text-danger'}"></td>
-                        <td th:text="${s.getSurname()}" th:class="${s.exam>=50?'text-primary':'text-danger'}"></td>
-                        <td th:text="${s.getExam()}" th:class="${s.exam>=50?'text-primary':'text-danger'}"></td>
-                        <td th:text="${s.getMark()}" th:class="${s.exam>=50?'text-primary':'text-danger'}"></td>
+                    <tr th:each="s : ${students}" th:style="${s.exam>=50?'color: black':'color: red'}">
+                        <td th:text="${s.getId()}">
+                        <td th:text="${s.getName()}"></td>
+                        <td th:text="${s.getSurname()}"></td>
+                        <td th:text="${s.getExam()}"></td>
+                        <td th:text="${s.getMark()}"></td>
                     </tr>
                     </tbody>
                 </table>
